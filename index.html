@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">📚 LibraryHub</a>
+    <nav aria-label="Main navigation">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#books">Books</a>
+      <a href="#add-book">Add Book</a>
+    </nav>
+  </header>
+
+  <main class="container" id="dashboard">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">LIBRARY MANAGEMENT</p>
+        <h1>Welcome back, librarian</h1>
+        <p>Keep your collection organized and ready for readers.</p>
+      </div>
+      <a class="button button-primary" href="#add-book">＋ Add a book</a>
+    </section>
+
+    <section class="stats" aria-label="Library statistics">
+      <article class="stat-card">
+        <span class="stat-icon purple">📖</span>
+        <div><p>Total books</p><strong>1,284</strong></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon green">↗</span>
+        <div><p>Books issued</p><strong>96</strong></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon orange">↩</span>
+        <div><p>Overdue returns</p><strong>12</strong></div>
+      </article>
+      <article class="stat-card">
+        <span class="stat-icon blue">👥</span>
+        <div><p>Members</p><strong>348</strong></div>
+      </article>
+    </section>
+
+    <section class="panel" id="books">
+      <div class="panel-heading">
+        <div>
+          <h2>Book collection</h2>
+          <p>Browse and manage the books in your library.</p>
+        </div>
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search books..." aria-label="Search books">
+        </label>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Book title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>ISBN</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>The Midnight Library</strong></td>
+              <td>Matt Haig</td>
+              <td>Fiction</td>
+              <td>978-0525559474</td>
+              <td><span class="badge available">Available</span></td>
+            </tr>
+            <tr>
+              <td><strong>Atomic Habits</strong></td>
+              <td>James Clear</td>
+              <td>Self-help</td>
+              <td>978-0735211292</td>
+              <td><span class="badge issued">Issued</span></td>
+            </tr>
+            <tr>
+              <td><strong>Educated</strong></td>
+              <td>Tara Westover</td>
+              <td>Memoir</td>
+              <td>978-0399590504</td>
+              <td><span class="badge available">Available</span></td>
+            </tr>
+            <tr>
+              <td><strong>Project Hail Mary</strong></td>
+              <td>Andy Weir</td>
+              <td>Science fiction</td>
+              <td>978-0593135204</td>
+              <td><span class="badge overdue">Overdue</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel add-panel" id="add-book">
+      <div class="panel-heading">
+        <div>
+          <h2>Add a book</h2>
+          <p>Enter the details to add a title to your collection.</p>
+        </div>
+      </div>
+      <form class="book-form">
+        <label>Book title<input type="text" placeholder="e.g. The Great Gatsby"></label>
+        <label>Author<input type="text" placeholder="e.g. F. Scott Fitzgerald"></label>
+        <label>Category<input type="text" placeholder="e.g. Fiction"></label>
+        <label>ISBN<input type="text" placeholder="e.g. 978-0000000000"></label>
+        <button class="button button-primary" type="submit">Add book</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>LibraryHub <span>•</span> Keeping stories within reach.</footer>
+</body>
+</html>
